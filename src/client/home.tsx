@@ -1,10 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+//import React from 'react'
 //import {Link } from 'react-router-dom';
 //console.log("#about.tsx");
 import Head from '../components/Head'
 //
-function Page(){
+export default function Page(){
   return(
   <div>
     <Head />
@@ -12,7 +11,3 @@ function Page(){
   </div>
   );
 }
-//
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Page />
-)

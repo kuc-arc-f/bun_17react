@@ -9,17 +9,16 @@ const Layout = ({ children }) => {
       <title>welcome</title>
     </head>
     <body>
-      <main>{children}</main>
+      <main>
+        {children}
+      </main>
+      {(process.env.NODE_ENV !== "production") ? (
+        <script type="module" src="/static/entry-client.js"></script>
+      ): (
+        <script type="module" src="/public/static/entry-client.js"></script>
+      )}  
     </body>
   </html>    
   );
 };
 export default Layout;
-/*
-<a href="/">[ home ]</a>
-{(process.env.NODE_ENV === "develop") ? (
-    <script type="module" src="/static/AuthCommon.js"></script>
-): (
-  <script type="module" src="/public/static/AuthCommon.js"></script>
-)}
-*/

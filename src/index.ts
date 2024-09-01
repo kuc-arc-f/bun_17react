@@ -19,12 +19,8 @@ const errorObj = {ret: "NG", messase: "Error"};
 app.use('/api/test', testRouter);
 
 //MPA
-app.get('/about', (req: any, res: any) => {
-  try {res.send(renderToString(About({})));} catch (error) { res.sendStatus(500);}
-});
-app.get("/", (req, res) => {
-  //console.log(htm);
-  res.send(renderToString(Top({})));
+app.get("/*", (req, res) => {
+  res.send(renderToString(Top()));
 });
 //start
 const port = 3000;

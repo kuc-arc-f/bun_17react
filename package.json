@@ -7,8 +7,8 @@
     "dev:test": "NODE_ENV=develop bun run src/index.ts",
     "build": "bun run build:server && bun run build:client",
     "build:server": "bun build --target=node --minify src/index.ts --outfile dist/index.js",
-    "build:client": "bun run ./src/lib/buildClient.ts",
-    "build:clientTest": "bun build --minify src/entry-client.ts --outfile public/static/entry-client.js",
+    "build:clientDebug": "bun run ./src/lib/buildClient.ts",
+    "build:client": "bun build --minify src/entry-client.tsx --outfile public/static/entry-client.js",
     "build:prod": "NODE_ENV=production bun build --target=node --minify src/index.ts --outfile dist/index.js",
     "clean": "bun run rimraf dist && bun run rimraf public/static",
     "start": "NODE_ENV=production bun run dist/index.js",
@@ -30,6 +30,7 @@
     "cookie-parser": "^1.4.6",
     "express": "^4.19.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
   }
 }
