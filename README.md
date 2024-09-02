@@ -25,6 +25,11 @@ bun run dev
 #watch-mode
 bun run watch
 ```
+***
+### Example
+* tailwind : tailwindcss example
+* shadcn : shadcn ui , example
+
 
 ***
 * vercel.json
