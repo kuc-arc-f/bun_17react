@@ -21,9 +21,6 @@ Bun + React + Express
 ```
 bun run build
 bun run dev
-
-#watch-mode
-bun run watch
 ```
 ***
 ### Example
